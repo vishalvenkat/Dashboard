@@ -1,0 +1,16 @@
+[{
+"brandId": 1,
+"brandName": "zenka",
+"facebookId": 1,
+"twitterId": 2,
+"instagramId": 3,
+"youtubeId": 4
+},{
+"brandId": 2,
+"brandName": "Beka",
+"facebookId": 5,
+"twitterId": 6,
+"instagramId": 7,
+"youtubeId": 8
+}
+]

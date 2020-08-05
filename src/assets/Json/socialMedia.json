@@ -1,0 +1,106 @@
+[
+  {
+    "socialMediaId": 1,
+    "socialMediaType": "facebook",
+    "followers": 1200,
+    "likes": {
+      "August": 1200,
+      "September": 1100
+    },
+    "pageViews": {
+      "August": 1200,
+      "September": 1100
+    }
+  },
+  {
+    "socialMediaId": 2,
+    "socialMediaType": "instagram",
+    "followers": 1200,
+    "likes": {
+      "August": 1200,
+      "September": 1100
+    },
+    "pageViews": {
+      "August": 1200,
+      "September": 1100
+    }
+  },
+  {
+    "socialMediaId": 3,
+    "socialMediaType": "twitter",
+    "followers": 1200,
+    "likes": {
+      "August": 1200,
+      "September": 1100
+    },
+    "pageViews": {
+      "August": 1200,
+      "September": 1100
+    }
+  },
+  {
+    "socialMediaId": 4,
+    "socialMediaType": "youtube",
+    "followers": 1200,
+    "likes": {
+      "August": 1200,
+      "September": 1100
+    },
+    "pageViews": {
+      "August": 1200,
+      "September": 1100
+    }
+  },
+  {
+    "socialMediaId": 5,
+    "socialMediaType": "facebook",
+    "followers": 1200,
+    "likes": {
+      "August": 1200,
+      "September": 1100
+    },
+    "pageViews": {
+      "August": 1200,
+      "September": 1100
+    }
+  },
+  {
+    "socialMediaId": 6,
+    "socialMediaType": "instagram",
+    "followers": 1200,
+    "likes": {
+      "August": 1200,
+      "September": 1100
+    },
+    "pageViews": {
+      "August": 1200,
+      "September": 1100
+    }
+  },
+  {
+    "socialMediaId": 7,
+    "socialMediaType": "twitter",
+    "followers": 1200,
+    "likes": {
+      "August": 1200,
+      "September": 1100
+    },
+    "pageViews": {
+      "August": 1200,
+      "September": 1100
+    }
+  },
+  {
+    "socialMediaId": 8,
+    "socialMediaType": "youtube",
+    "followers": 1200,
+    "likes": {
+      "August": 1200,
+      "September": 1100
+    },
+    "pageViews": {
+      "August": 1200,
+      "September": 1100
+    }
+  }
+]

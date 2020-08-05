@@ -1,0 +1,26 @@
+<div class="dashboard">
+  <div class="dashboard__dropdown">
+    <mat-form-field>
+      <mat-select
+        [(value)]="brandSelected"
+        (selectionChange)="getSelectedBrandDetails($event)"
+      >
+        <mat-option [value]="'All'">All</mat-option>
+        <div *ngFor="let brand of brandService.brandList">
+          <mat-option [value]="brand">{{ brand.brandName }}</mat-option>
+        </div>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="dashboard__cardView">
+    <div class="dashboard__cards" *ngFor="let socialMedia of dashBoardList">
+      <app-social-media-card
+        [imgSource]="
+          socialMediaService.getImageSource(socialMedia.socialMediaType)
+        "
+        [followersCount]="socialMedia.followers"
+        [userName]="socialMedia.socialMediaType"
+      ></app-social-media-card>
+    </div>
+  </div>
+</div>

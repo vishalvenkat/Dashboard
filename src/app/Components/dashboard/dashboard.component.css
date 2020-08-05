@@ -1,0 +1,4 @@
+.dashboard__cardView {
+  display: flex;
+  flex: row wrap;
+}
