@@ -4,6 +4,7 @@ import { Brand } from "src/app/Classes/brand";
 import { SocialMediaService } from "src/app/Services/social-media.service";
 import { SocialMediaType } from "src/app/types/SocialMediaType";
 import { SocialMedia } from "src/app/Classes/social-media";
+import { ThemeService } from "src/app/Services/theme.service";
 
 @Component({
   selector: "app-dashboard",

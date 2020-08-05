@@ -11,6 +11,7 @@ import { DashboardComponent } from "./Components/dashboard/dashboard.component";
 import { SocialMediaCardComponent } from "./Components/social-media-card/social-media-card.component";
 import { OverviewCardComponent } from "./Components/overview-card/overview-card.component";
 import { HttpClientModule } from "@angular/common/http";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { HttpClientModule } from "@angular/common/http";
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

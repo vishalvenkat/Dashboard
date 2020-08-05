@@ -1,4 +1,11 @@
-.dashboard__cardView {
+.dashboard {
   display: flex;
-  flex: row wrap;
+  flex: 1;
+}
+.dashboard__dropdown {
+  flex: 0.2;
+}
+.dashboard__cardView {
+  flex: 0.8;
+  flex-direction: column;
 }

@@ -29,7 +29,6 @@ export class SocialMediaService {
     );
   };
   getImageSource = (socialMediaType: string) => {
-    console.log("called");
     switch (socialMediaType) {
       case "facebook":
         return "../../../assets/Images/Icons/facebook.png";
