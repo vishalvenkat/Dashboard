@@ -9,9 +9,6 @@ import { SocialMediaService } from "./Services/social-media.service";
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  isBlackTheme: boolean = false;
-  bgDark = "bgDark";
-  bgLight = "bgLight";
   constructor(
     private brandService: BrandService,
     router: Router,
@@ -19,7 +16,4 @@ export class AppComponent {
   ) {
     router.navigate([""]);
   }
-  changeTheme = () => {
-    this.isBlackTheme = !this.isBlackTheme;
-  };
 }

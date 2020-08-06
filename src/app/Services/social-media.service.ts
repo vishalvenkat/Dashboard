@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
-import { SocialMedia } from "../Classes/social-media";
+import { SocialMedia } from "../Interface/social-media";
+import { MonthCount } from "../Interface/monthAndCount";
 
 @Injectable({
   providedIn: "root",
@@ -9,7 +10,7 @@ export class SocialMediaService {
   socialMediaList: SocialMedia[] = [];
   constructor(http: HttpClient) {
     http.get("./assets/Json/socialMedia.json").subscribe(
-      (data) => {
+      (data: SocialMedia[]) => {
         this.generateBrandList(data);
       },
       (err: HttpErrorResponse) => {
@@ -17,10 +18,10 @@ export class SocialMediaService {
       }
     );
   }
-  generateBrandList = (data: Object): void => {
-    for (const socialMedia in data) {
-      this.socialMediaList.push(data[socialMedia]);
-    }
+  generateBrandList = (data: SocialMedia[]): void => {
+    data.forEach((socialMedia) => {
+      this.socialMediaList.push(socialMedia);
+    });
   };
 
   getSocialMediaWithId = (id: number) => {

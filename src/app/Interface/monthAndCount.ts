@@ -1,4 +1,4 @@
-export type MonthCount = {
+export interface MonthCount {
   month: string;
   count: number;
-};
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "name": "light",
+    "properties": {
+      "--foreground-header": "#000000",
+      "--foreground-dashboard-side": "#ffffff",
+      "--foreground-dashboard-main": "#f9f9f9",
+      "--foreground-socialmedia-normal": "#898989",
+      "--foreground-socialmedia-hover": "#5a5b5d",
+      "--foreground-overview": "#41474d",
+
+      "--background-header": "#ffffff",
+      "--background-dashboard-side": "#ffffff",
+      "--background-dashboard-main": "#f9f9f9",
+      "--background-socialmedia-normal": "#898989",
+      "--background-socialmedia-hover": "#5a5b5d",
+      "--background-overview": "#41474d",
+
+      "--background-shadow": "0 1px 3px 0 rgba(92, 125, 153, 0.5)"
+    }
+  },
+  {
+    "name": "dark",
+    "properties": {
+      "--foreground-header": "#ffffff",
+      "--foreground-dashboard-side": "#ffffff",
+      "--foreground-dashboard-main": "#f9f9f9",
+      "--foreground-storycard-normal": "#898989",
+      "--foreground-storycard-hover": "#5a5b5d",
+      "--foreground-overview": "#41474d",
+
+      "--background-header": "#41474d",
+      "--background-dashboard-side": "#41474d",
+      "--background-dashboard-main": "#41474d",
+      "--background-storycard-normal": "#41474d",
+      "--background-storycard-hover": "#41474d",
+      "--background-overview": "#41474d",
+
+      "--background-shadow": "0 1px 3px 0 rgba(8, 9, 10, 0.5)"
+    }
+  }
+]

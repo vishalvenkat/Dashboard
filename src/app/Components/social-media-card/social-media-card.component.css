@@ -1,11 +1,15 @@
 .card {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: var(--background-socialmedia-normal);
   padding: 4% 4%;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: var(--background-socialmedia-hover);
+}
+.card:hover {
+  background-color: var(--background-shadow);
+  cursor: pointer;
 }
 .card__header {
   display: flex;

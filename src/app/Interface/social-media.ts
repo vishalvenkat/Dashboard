@@ -1,6 +1,6 @@
-import { MonthCount } from "../types/monthAndCount";
+import { MonthCount } from "./monthAndCount";
 
-export class SocialMedia {
+export interface SocialMedia {
   socialMediaType: string;
   socialMediaId: number;
   socialMediaUserName: string;

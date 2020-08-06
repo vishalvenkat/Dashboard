@@ -1,7 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
-import { Brand } from "../Classes/brand";
-import { brandType } from "../types/BrandType";
+import { Brand } from "../Interface/brand";
 @Injectable({
   providedIn: "root",
 })
@@ -9,7 +8,7 @@ export class BrandService {
   brandList: Brand[] = [];
   constructor(http: HttpClient) {
     http.get("./assets/Json/brand.json").subscribe(
-      (data) => {
+      (data: Brand[]) => {
         this.generateBrandList(data);
       },
       (err: HttpErrorResponse) => {
@@ -17,9 +16,9 @@ export class BrandService {
       }
     );
   }
-  generateBrandList = (data: Object): void => {
-    for (const brand in data) {
-      this.brandList.push(data[brand]);
-    }
+  generateBrandList = (data: Brand[]): void => {
+    data.forEach((brand) => {
+      this.brandList.push(brand);
+    });
   };
 }

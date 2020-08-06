@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from "@angular/core";
 import { MAT_DIALOG_DATA } from "@angular/material/dialog";
-import { SocialMedia } from "src/app/Classes/social-media";
+import { SocialMedia } from "src/app/Interface/social-media";
 import { SocialMediaService } from "src/app/Services/social-media.service";
 
 @Component({

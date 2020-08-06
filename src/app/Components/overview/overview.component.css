@@ -1,29 +1,32 @@
 .overview {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  background: var(--background-overview);
+  height: 100%;
+}
+.overview__dropdown {
+  margin: 15px auto;
 }
 .overview_logo {
   display: flex;
+  margin: auto;
   align-items: center;
   margin-top: 15px;
 }
 .overview__data {
   display: flex;
-  justify-content: space-between;
-  margin-top: 15px;
+  justify-content: space-evenly;
+  margin-bottom: 75px;
 }
 .data__header {
   font-size: large;
   align-items: center;
+  color: var(--foreground-overview);
 }
 .data__count {
+  margin-top: 15px;
   font-size: x-large;
   align-items: center;
-}
-hr {
-  border: 1px solid grey;
-  width: 100%;
 }
 .data {
   display: flex;

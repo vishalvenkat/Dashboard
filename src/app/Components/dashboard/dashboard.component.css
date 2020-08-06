@@ -1,13 +1,14 @@
 .dashboard {
   display: flex;
+  background-color: var(--background-dashboard-main);
 }
 .dashboard__dropdown {
   padding-right: 2%;
+  background-color: var(--background-dashboard-side);
 }
 .dashboard__cardView {
   display: flex;
   flex-wrap: wrap;
-  background-color: #f2f2f2;
 }
 .dashboard__card {
   width: 200px;

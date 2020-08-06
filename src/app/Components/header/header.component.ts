@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from "@angular/core";
+import { ThemeService } from "src/app/Services/theme.service";
 
 @Component({
   selector: "app-header",
@@ -6,14 +7,10 @@ import { Component, OnInit, Output, EventEmitter } from "@angular/core";
   styleUrls: ["./header.component.css"],
 })
 export class HeaderComponent implements OnInit {
-  @Output() theme = new EventEmitter<boolean>();
-  isBlack: boolean = false;
-  bgDark = "bgDark";
-  bgLight = "bgLight";
-  constructor() {}
+  constructor(private themeService: ThemeService) {}
 
   ngOnInit() {}
   changeTheme = () => {
-    this.theme.emit(this.isBlack);
+    this.themeService.toggleTheme();
   };
 }

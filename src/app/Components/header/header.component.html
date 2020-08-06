@@ -1,18 +1,14 @@
-<div [ngClass]="isBlack ? bgDark : bgLight">
-  <ul class="header">
-    <div class="header__logo">
-      <li>
-        <button mat-button routerLink="/">
-          <mat-icon>dashboard</mat-icon>Dashboard
-        </button>
-      </li>
-    </div>
-    <div class="header__rightside">
-      <li routerLink="/Dashboard"><button mat-button>Dashboard</button></li>
-      <li><button mat-button>About</button></li>
-      <mat-slide-toggle [(ngModel)]="isBlack" (change)="changeTheme()"
-        >{{ isBlack ? "Light theme" : "Dark theme" }} selected</mat-slide-toggle
-      >
-    </div>
-  </ul>
-</div>
+<ul class="header">
+  <div class="header__logo">
+    <li>
+      <button mat-button routerLink="/">
+        <mat-icon>dashboard</mat-icon>Dashboard
+      </button>
+    </li>
+  </div>
+  <div class="header__rightside">
+    <li routerLink="/Dashboard"><button mat-button>Dashboard</button></li>
+    <li><button mat-button>About</button></li>
+    <mat-slide-toggle (change)="changeTheme()"></mat-slide-toggle>
+  </div>
+</ul>

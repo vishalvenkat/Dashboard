@@ -1,9 +1,9 @@
 import { Component, OnInit } from "@angular/core";
 import { BrandService } from "src/app/Services/brand.service";
-import { Brand } from "src/app/Classes/brand";
+import { Brand } from "src/app/Interface/brand";
 import { SocialMediaService } from "src/app/Services/social-media.service";
-import { SocialMedia } from "src/app/Classes/social-media";
-import { MonthCount } from "src/app/types/monthAndCount";
+import { SocialMedia } from "src/app/Interface/social-media";
+import { MonthCount } from "src/app/Interface/monthAndCount";
 import { MatDialog } from "@angular/material/dialog";
 import { OverviewComponent } from "../overview/overview.component";
 
@@ -63,10 +63,10 @@ export class DashboardComponent implements OnInit {
   };
   popupSocialMedia = (socialMedia: SocialMedia) => {
     let likes: MonthCount[] = socialMedia.likes;
-    /*
-    for (const like in likes) {
-      console.log(like);
-    }*/
-    this.dialog.open(OverviewComponent, { data: socialMedia });
+    this.dialog.open(OverviewComponent, {
+      height: "400px",
+      width: "600px",
+      data: socialMedia,
+    });
   };
 }

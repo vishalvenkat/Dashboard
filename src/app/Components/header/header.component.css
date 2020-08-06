@@ -7,11 +7,13 @@
   z-index: 100;
   align-items: center;
   list-style-type: none;
+  background-color: var(--background-header);
+  color: var(--foreground-header);
   flex: 1;
 }
 button:hover {
-  background-color: #5fa9ee;
-  color: #f2f2f2;
+  background-color: #e7e7e7;
+  color: #575757;
 }
 .header__logo {
   display: flex;
@@ -22,8 +24,4 @@ button:hover {
   display: flex;
   flex: 0.3;
   justify-content: space-evenly;
-}
-
-.bgDark > .header {
-  background-color: #333335;
 }

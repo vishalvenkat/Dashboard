@@ -9,7 +9,6 @@ import { MaterialModule } from "./Modules/material/material.module";
 import { HomepageComponent } from "./Components/homepage/homepage.component";
 import { DashboardComponent } from "./Components/dashboard/dashboard.component";
 import { SocialMediaCardComponent } from "./Components/social-media-card/social-media-card.component";
-import { OverviewCardComponent } from "./Components/overview-card/overview-card.component";
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
 import { OverviewComponent } from "./Components/overview/overview.component";
@@ -21,7 +20,6 @@ import { OverviewComponent } from "./Components/overview/overview.component";
     HomepageComponent,
     DashboardComponent,
     SocialMediaCardComponent,
-    OverviewCardComponent,
     OverviewComponent,
   ],
   imports: [
