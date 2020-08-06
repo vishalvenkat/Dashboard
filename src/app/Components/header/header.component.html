@@ -9,6 +9,19 @@
   <div class="header__rightside">
     <li routerLink="/Dashboard"><button mat-button>Dashboard</button></li>
     <li><button mat-button>About</button></li>
-    <mat-slide-toggle (change)="changeTheme()"></mat-slide-toggle>
+    <li>
+      <button mat-button [matMenuTriggerFor]="menu">
+        <mat-icon>palette</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button
+          *ngFor="let theme of themeList"
+          mat-menu-item
+          (click)="changeTheme(theme)"
+        >
+          {{ theme.name }}
+        </button>
+      </mat-menu>
+    </li>
   </div>
 </ul>

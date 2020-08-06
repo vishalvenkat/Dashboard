@@ -8,8 +8,6 @@ import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 export class ThemeService {
   private active: Theme;
   private availableThemes: Theme[] = [];
-  private light: Theme;
-  private dark: Theme;
   constructor(http: HttpClient) {
     http.get("./assets/Json/theme.json").subscribe(
       (data: Theme[]) => {
@@ -25,16 +23,10 @@ export class ThemeService {
       this.availableThemes.push(theme);
     });
     this.active = data.find((theme) => theme.name === "light");
-    this.light = this.active;
-    this.dark = data.find((theme) => theme.name === "dark");
   };
-  toggleTheme = (): void => {
-    console.log(this.active.name);
-    this.active === this.light
-      ? this.setActiveTheme(this.dark)
-      : this.setActiveTheme(this.light);
+  getAvailableThemes = () => {
+    return this.availableThemes;
   };
-
   setActiveTheme(theme: Theme): void {
     this.active = theme;
     Object.keys(this.active.properties).forEach((property) => {
