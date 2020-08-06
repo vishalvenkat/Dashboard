@@ -27,7 +27,6 @@ export class ThemeService {
     this.active = data.find((theme) => theme.name === "light");
     this.light = this.active;
     this.dark = data.find((theme) => theme.name === "dark");
-    console.log(`${this.active === this.light}`);
   };
   toggleTheme = (): void => {
     console.log(this.active.name);
@@ -38,7 +37,6 @@ export class ThemeService {
 
   setActiveTheme(theme: Theme): void {
     this.active = theme;
-    console.log(`${this.active.name} after toggle`);
     Object.keys(this.active.properties).forEach((property) => {
       document.documentElement.style.setProperty(
         property,
