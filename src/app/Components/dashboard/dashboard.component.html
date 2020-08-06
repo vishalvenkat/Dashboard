@@ -3,7 +3,7 @@
     <mat-form-field>
       <mat-select
         [(value)]="brandSelected"
-        (selectionChange)="getSelectedBrandDetails($event)"
+        (selectionChange)="getSelectedBrandDetails(brandSelected)"
       >
         <mat-option [value]="'All'">All</mat-option>
         <div *ngFor="let brand of brandService.brandList">
@@ -13,13 +13,17 @@
     </mat-form-field>
   </div>
   <div class="dashboard__cardView">
-    <div class="dashboard__cards" *ngFor="let socialMedia of dashBoardList">
+    <div
+      class="dashboard__card"
+      *ngFor="let socialMedia of dashBoardList"
+      (click)="popupSocialMedia(socialMedia)"
+    >
       <app-social-media-card
         [imgSource]="
           socialMediaService.getImageSource(socialMedia.socialMediaType)
         "
         [followersCount]="socialMedia.followers"
-        [userName]="socialMedia.socialMediaType"
+        [userName]="socialMedia.socialMediaUserName"
       ></app-social-media-card>
     </div>
   </div>

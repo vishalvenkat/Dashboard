@@ -43,4 +43,39 @@ export class SocialMediaService {
         return "../../../assets/Images/Icons/youtube.png";
     }
   };
+  getCountForId = (id: number, month: string) => {
+    let likeCount = 0;
+    let pageViewCount = 0;
+    let socialMedia = this.getSocialMediaWithId(id);
+    for (const like in socialMedia.likes) {
+      if (like === month) {
+        likeCount = Number(socialMedia.likes[like]);
+        break;
+      }
+    }
+    for (const pageView in socialMedia.pageViews) {
+      if (pageView === month) {
+        pageViewCount = Number(socialMedia.pageViews[pageView]);
+        break;
+      }
+    }
+    return {
+      likeCount: likeCount,
+      pageViewCount: pageViewCount,
+    };
+  };
+  getTotalCounts = (id: number) => {
+    let socialMedia = this.getSocialMediaWithId(id);
+    let totalLikesCount = 0;
+    let totalPageViewCount = 0;
+    for (const month in socialMedia.likes) {
+      let counts = this.getCountForId(id, month);
+      totalLikesCount += counts.likeCount;
+      totalPageViewCount += counts.pageViewCount;
+    }
+    return {
+      totalLikesCount: totalLikesCount,
+      totalPageViewCount: totalPageViewCount,
+    };
+  };
 }

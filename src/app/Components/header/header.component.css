@@ -23,3 +23,7 @@ button:hover {
   flex: 0.3;
   justify-content: space-evenly;
 }
+
+.bgDark > .header {
+  background-color: #333335;
+}

@@ -13,16 +13,10 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 .bgLight {
-  background-color: #f2f2f2;
+  background-color: #fff;
   color: #000;
 }
 .bgDark {
   background-color: #1c1c1e;
   color: #fefefe;
-}
-.bgDark > .header {
-  background-color: #000;
-}
-.bgLight > .header {
-  background-color: #fff;
 }

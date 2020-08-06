@@ -1,0 +1,31 @@
+<div class="overview">
+  <div class="overview__dropdown">
+    <mat-form-field>
+      <mat-label>Select Month</mat-label>
+      <mat-select
+        [(value)]="monthSelected"
+        (selectionChange)="fetchValues(monthSelected)"
+      >
+        <mat-option [value]="'All'">Whole Year</mat-option>
+        <div *ngFor="let month of monthList">
+          <mat-option [value]="month">{{ month }}</mat-option>
+        </div>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <hr />
+  <div class="overview_logo">
+    <img [src]="imgSource" alt="Social media icon" class="logo__icon" />
+    <div class="logo__username">{{ data.socialMediaUserName }}</div>
+  </div>
+  <div class="overview__data">
+    <div class="data">
+      <div class="data__header">Likes</div>
+      <div class="data__count">{{ likeCount }}</div>
+    </div>
+    <div class="data">
+      <div class="data__header">PageView</div>
+      <div class="data__count">{{ pageViewCount }}</div>
+    </div>
+  </div>
+</div>

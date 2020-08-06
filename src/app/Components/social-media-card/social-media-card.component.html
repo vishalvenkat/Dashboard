@@ -1,8 +1,10 @@
 <div class="card">
-  <img [src]="imgSource" alt="Social media icon" class="card__icon" />
-  <div class="card__accountId">{{ "Id" + userName }}</div>
+  <div class="card__header">
+    <img [src]="imgSource" alt="Social media icon" class="card__icon" />
+    <div class="card__username">{{ userName }}</div>
+  </div>
   <div class="card__followers">
     <div class="card__followers__count">{{ followersCount }}</div>
-    <div class="card__followers__text">Followers</div>
+    <div class="card__followers__text">FOLLOWERS</div>
   </div>
 </div>

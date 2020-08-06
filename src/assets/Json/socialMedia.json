@@ -2,105 +2,273 @@
   {
     "socialMediaId": 1,
     "socialMediaType": "facebook",
+    "socialMediaUserName": "@zenkaFacebook",
     "followers": 1200,
     "likes": {
-      "August": 1200,
-      "September": 1100
+      "January": 100,
+      "Febraury": 200,
+      "March": 300,
+      "April": 400,
+      "May": 500,
+      "June": 600,
+      "July": 700,
+      "August": 800,
+      "September": 900,
+      "October": 1000,
+      "November": 1100,
+      "December": 1200
     },
     "pageViews": {
-      "August": 1200,
-      "September": 1100
+      "January": 100,
+      "Febraury": 200,
+      "March": 300,
+      "April": 400,
+      "May": 500,
+      "June": 600,
+      "July": 700,
+      "August": 800,
+      "September": 900,
+      "October": 1000,
+      "November": 1100,
+      "December": 1200
     }
   },
   {
     "socialMediaId": 2,
     "socialMediaType": "instagram",
+    "socialMediaUserName": "@zenkaInstagram",
     "followers": 1200,
     "likes": {
-      "August": 1200,
-      "September": 1100
+      "January": 100,
+      "Febraury": 200,
+      "March": 300,
+      "April": 400,
+      "May": 500,
+      "June": 600,
+      "July": 700,
+      "August": 800,
+      "September": 900,
+      "October": 1000,
+      "November": 1100,
+      "December": 1200
     },
     "pageViews": {
-      "August": 1200,
-      "September": 1100
+      "January": 100,
+      "Febraury": 200,
+      "March": 300,
+      "April": 400,
+      "May": 500,
+      "June": 600,
+      "July": 700,
+      "August": 800,
+      "September": 900,
+      "October": 1000,
+      "November": 1100,
+      "December": 1200
     }
   },
   {
     "socialMediaId": 3,
     "socialMediaType": "twitter",
+    "socialMediaUserName": "@zenkaTwitter",
     "followers": 1200,
     "likes": {
-      "August": 1200,
-      "September": 1100
+      "January": 100,
+      "Febraury": 200,
+      "March": 300,
+      "April": 400,
+      "May": 500,
+      "June": 600,
+      "July": 700,
+      "August": 800,
+      "September": 900,
+      "October": 1000,
+      "November": 1100,
+      "December": 1200
     },
     "pageViews": {
-      "August": 1200,
-      "September": 1100
+      "January": 100,
+      "Febraury": 200,
+      "March": 300,
+      "April": 400,
+      "May": 500,
+      "June": 600,
+      "July": 700,
+      "August": 800,
+      "September": 900,
+      "October": 1000,
+      "November": 1100,
+      "December": 1200
     }
   },
   {
     "socialMediaId": 4,
     "socialMediaType": "youtube",
+    "socialMediaUserName": "@zenkaYoutube",
     "followers": 1200,
     "likes": {
-      "August": 1200,
-      "September": 1100
+      "January": 100,
+      "Febraury": 200,
+      "March": 300,
+      "April": 400,
+      "May": 500,
+      "June": 600,
+      "July": 700,
+      "August": 800,
+      "September": 900,
+      "October": 1000,
+      "November": 1100,
+      "December": 1200
     },
     "pageViews": {
-      "August": 1200,
-      "September": 1100
+      "January": 100,
+      "Febraury": 200,
+      "March": 300,
+      "April": 400,
+      "May": 500,
+      "June": 600,
+      "July": 700,
+      "August": 800,
+      "September": 900,
+      "October": 1000,
+      "November": 1100,
+      "December": 1200
     }
   },
   {
     "socialMediaId": 5,
     "socialMediaType": "facebook",
+    "socialMediaUserName": "@bekaFacebook",
     "followers": 1200,
     "likes": {
-      "August": 1200,
-      "September": 1100
+      "January": 100,
+      "Febraury": 200,
+      "March": 300,
+      "April": 400,
+      "May": 500,
+      "June": 600,
+      "July": 700,
+      "August": 800,
+      "September": 900,
+      "October": 1000,
+      "November": 1100,
+      "December": 1200
     },
     "pageViews": {
-      "August": 1200,
-      "September": 1100
+      "January": 100,
+      "Febraury": 200,
+      "March": 300,
+      "April": 400,
+      "May": 500,
+      "June": 600,
+      "July": 700,
+      "August": 800,
+      "September": 900,
+      "October": 1000,
+      "November": 1100,
+      "December": 1200
     }
   },
   {
     "socialMediaId": 6,
     "socialMediaType": "instagram",
+    "socialMediaUserName": "@bekaInstagram",
     "followers": 1200,
     "likes": {
-      "August": 1200,
-      "September": 1100
+      "January": 100,
+      "Febraury": 200,
+      "March": 300,
+      "April": 400,
+      "May": 500,
+      "June": 600,
+      "July": 700,
+      "August": 800,
+      "September": 900,
+      "October": 1000,
+      "November": 1100,
+      "December": 1200
     },
     "pageViews": {
-      "August": 1200,
-      "September": 1100
+      "January": 100,
+      "Febraury": 200,
+      "March": 300,
+      "April": 400,
+      "May": 500,
+      "June": 600,
+      "July": 700,
+      "August": 800,
+      "September": 900,
+      "October": 1000,
+      "November": 1100,
+      "December": 1200
     }
   },
   {
     "socialMediaId": 7,
     "socialMediaType": "twitter",
+    "socialMediaUserName": "@bekaTwitter",
     "followers": 1200,
     "likes": {
-      "August": 1200,
-      "September": 1100
+      "January": 100,
+      "Febraury": 200,
+      "March": 300,
+      "April": 400,
+      "May": 500,
+      "June": 600,
+      "July": 700,
+      "August": 800,
+      "September": 900,
+      "October": 1000,
+      "November": 1100,
+      "December": 1200
     },
     "pageViews": {
-      "August": 1200,
-      "September": 1100
+      "January": 100,
+      "Febraury": 200,
+      "March": 300,
+      "April": 400,
+      "May": 500,
+      "June": 600,
+      "July": 700,
+      "August": 800,
+      "September": 900,
+      "October": 1000,
+      "November": 1100,
+      "December": 1200
     }
   },
   {
     "socialMediaId": 8,
     "socialMediaType": "youtube",
+    "socialMediaUserName": "@bekaYoutube",
     "followers": 1200,
     "likes": {
-      "August": 1200,
-      "September": 1100
+      "January": 100,
+      "Febraury": 200,
+      "March": 300,
+      "April": 400,
+      "May": 500,
+      "June": 600,
+      "July": 700,
+      "August": 800,
+      "September": 900,
+      "October": 1000,
+      "November": 1100,
+      "December": 1200
     },
     "pageViews": {
-      "August": 1200,
-      "September": 1100
+      "January": 100,
+      "Febraury": 200,
+      "March": 300,
+      "April": 400,
+      "May": 500,
+      "June": 600,
+      "July": 700,
+      "August": 800,
+      "September": 900,
+      "October": 1000,
+      "November": 1100,
+      "December": 1200
     }
   }
 ]

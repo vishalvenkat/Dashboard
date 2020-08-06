@@ -2,9 +2,10 @@ import { Component, OnInit } from "@angular/core";
 import { BrandService } from "src/app/Services/brand.service";
 import { Brand } from "src/app/Classes/brand";
 import { SocialMediaService } from "src/app/Services/social-media.service";
-import { SocialMediaType } from "src/app/types/SocialMediaType";
 import { SocialMedia } from "src/app/Classes/social-media";
-import { ThemeService } from "src/app/Services/theme.service";
+import { MonthCount } from "src/app/types/monthAndCount";
+import { MatDialog } from "@angular/material/dialog";
+import { OverviewComponent } from "../overview/overview.component";
 
 @Component({
   selector: "app-dashboard",
@@ -18,20 +19,20 @@ export class DashboardComponent implements OnInit {
 
   constructor(
     private brandService: BrandService,
-    private socialMediaService: SocialMediaService
+    private socialMediaService: SocialMediaService,
+    private dialog: MatDialog
   ) {}
 
   ngOnInit() {
     this.selectedBrandList = this.brandService.brandList;
     this.getSocialMediaList(this.brandService.brandList);
   }
-  getSelectedBrandDetails = (event: any) => {
-    let brandId = event.value.brandId;
-    if (brandId === undefined) {
+  getSelectedBrandDetails = (brand1: Brand) => {
+    if (brand1.brandId === undefined) {
       this.getSocialMediaList(this.brandService.brandList);
     } else {
       let brand = this.brandService.brandList.find(
-        (brand) => brand.brandId === brandId
+        (brand) => brand.brandId === brand1.brandId
       );
       let tempBrandList: Brand[] = [];
       tempBrandList.push(brand);
@@ -59,5 +60,13 @@ export class DashboardComponent implements OnInit {
       tempDashboardList.push(youtube);
     });
     this.dashBoardList = tempDashboardList;
+  };
+  popupSocialMedia = (socialMedia: SocialMedia) => {
+    let likes: MonthCount[] = socialMedia.likes;
+    /*
+    for (const like in likes) {
+      console.log(like);
+    }*/
+    this.dialog.open(OverviewComponent, { data: socialMedia });
   };
 }

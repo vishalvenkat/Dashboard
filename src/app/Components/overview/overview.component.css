@@ -1,0 +1,32 @@
+.overview {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.overview_logo {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+.overview__data {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.data__header {
+  font-size: large;
+  align-items: center;
+}
+.data__count {
+  font-size: x-large;
+  align-items: center;
+}
+hr {
+  border: 1px solid grey;
+  width: 100%;
+}
+.data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
