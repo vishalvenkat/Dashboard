@@ -1,14 +1,15 @@
 .card {
   display: flex;
   flex-direction: column;
-  background-color: var(--background-socialmedia-normal);
+  background-color: var(--bg-tertiary);
   padding: 4% 4%;
   align-items: center;
   justify-content: space-between;
   box-shadow: var(--background-socialmedia-hover);
+  color: var(--text-color-secondary);
 }
 .card:hover {
-  background-color: var(--background-shadow);
+  background-color: var(--hover--primary);
   cursor: pointer;
 }
 .card__header {

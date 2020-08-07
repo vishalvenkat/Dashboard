@@ -1,23 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 :root {
-  /* Colors */
-  --foreground-header: #000000;
-  --foreground-dashboard-side: hsl(0, 0%, 100%);
-  --foreground-dashboard-main: #f9f9f9;
-  --foreground-socialmedia-normal: #898989;
-  --foreground-socialmedia-hover: #5a5b5d;
-  --foreground-overview: #ffffff;
-
-  --background-header: #ffffff;
-  --background-dashboard-side: #ffffff;
-  --background-dashboard-main: #797c80;
-  --background-socialmedia-normal: #f4faff;
-  --background-socialmedia-hover: #41474d;
-  --background-overview: #ffffff;
-
-  /* Shadows */
-  --background-shadow: 0 1px 3px 0 rgba(92, 125, 153, 0.5);
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fe;
+  --bg-tertiary: #f0f3fa;
+  --bg-dropdown: #f0f3fa;
+  --text-color-primary: #ffffff;
+  --text-color-secondary: #1a1a22;
+  --hover--primary: #a4a5c1;
 }
 * {
   margin: 0;

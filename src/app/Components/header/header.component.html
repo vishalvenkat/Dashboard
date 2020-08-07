@@ -15,6 +15,7 @@
       </button>
       <mat-menu #menu="matMenu">
         <button
+          class="menu__button"
           *ngFor="let theme of themeList"
           mat-menu-item
           (click)="changeTheme(theme)"

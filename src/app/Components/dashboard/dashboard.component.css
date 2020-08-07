@@ -1,10 +1,13 @@
 .dashboard {
   display: flex;
-  background-color: var(--background-dashboard-main);
+  color: var(--text-color-primary);
 }
 .dashboard__dropdown {
   padding-right: 2%;
-  background-color: var(--background-dashboard-side);
+}
+.dropdown {
+  background-color: var(--bg-dropdown);
+  border-radius: 5%;
 }
 .dashboard__cardView {
   display: flex;
@@ -21,4 +24,9 @@
   .dashboard__card {
     width: 350px;
   }
+}
+
+mat-option {
+  background-color: var(--bg-secondary);
+  color: var(--text-color-secondary);
 }

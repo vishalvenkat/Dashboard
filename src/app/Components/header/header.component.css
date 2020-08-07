@@ -7,13 +7,13 @@
   z-index: 100;
   align-items: center;
   list-style-type: none;
-  background-color: var(--background-header);
-  color: var(--foreground-header);
+  background-color: var(--bg-secondary);
+  color: var(--text-color-secondary);
   flex: 1;
 }
 button:hover {
-  background-color: #e7e7e7;
-  color: #575757;
+  background-color: var(--hover--primary);
+  color: var(--text-color-secondary);
 }
 .header__logo {
   display: flex;
@@ -24,4 +24,9 @@ button:hover {
   display: flex;
   flex: 0.3;
   justify-content: space-evenly;
+}
+
+.menu__button {
+  background-color: var(--bg-secondary);
+  color: var(--text-color-secondary);
 }

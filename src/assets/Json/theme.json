@@ -2,41 +2,37 @@
   {
     "name": "light",
     "properties": {
-      "--foreground-header": "#000000",
-      "--foreground-dashboard-side": "#ffffff",
-      "--foreground-dashboard-main": "#f9f9f9",
-      "--foreground-socialmedia-normal": "#898989",
-      "--foreground-socialmedia-hover": "#5a5b5d",
-      "--foreground-overview": "#41474d",
-
-      "--background-header": "#ffffff",
-      "--background-dashboard-side": "#ffffff",
-      "--background-dashboard-main": "#f9f9f9",
-      "--background-socialmedia-normal": "#898989",
-      "--background-socialmedia-hover": "#5a5b5d",
-      "--background-overview": "#41474d",
-
-      "--background-shadow": "0 1px 3px 0 rgba(92, 125, 153, 0.5)"
+      "--bg-primary": "#ffffff",
+      "--bg-secondary": "#f8f9fe",
+      "--bg-tertiary": "#f0f3fa",
+      "--bg-dropdown": "#f0f3fa",
+      "--text-color-primary": "#ffffff",
+      "--text-color-secondary": "#1a1a22",
+      "--hover--primary": "#a4a5c1"
     }
   },
   {
     "name": "dark",
     "properties": {
-      "--foreground-header": "#ffffff",
-      "--foreground-dashboard-side": "#ffffff",
-      "--foreground-dashboard-main": "#f9f9f9",
-      "--foreground-storycard-normal": "#898989",
-      "--foreground-storycard-hover": "#5a5b5d",
-      "--foreground-overview": "#41474d",
-
-      "--background-header": "#41474d",
-      "--background-dashboard-side": "#41474d",
-      "--background-dashboard-main": "#41474d",
-      "--background-storycard-normal": "#41474d",
-      "--background-storycard-hover": "#41474d",
-      "--background-overview": "#41474d",
-
-      "--background-shadow": "0 1px 3px 0 rgba(8, 9, 10, 0.5)"
+      "--bg-primary": "#1d2029",
+      "--bg-secondary": "#20222f",
+      "--bg-tertiary": "#252b43",
+      "--bg-dropdown": "#252b43",
+      "--text-color-primary": "#ffffff",
+      "--text-color-secondary": "#dadde6",
+      "--hover--primary": "#30445c"
+    }
+  },
+  {
+    "name": "purple",
+    "properties": {
+      "--bg-primary": "#130b22",
+      "--bg-secondary": "#180f2c",
+      "--bg-tertiary": "#180f2c",
+      "--bg-dropdown": "#180f2c",
+      "--text-color-primary": "#ffffff",
+      "--text-color-secondary": "#f2f2f2",
+      "--hover--primary": "#2c1853"
     }
   }
 ]
