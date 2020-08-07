@@ -67,6 +67,7 @@ export class DashboardComponent implements OnInit {
       height: "400px",
       width: "600px",
       data: socialMedia,
+      panelClass: "custom-modalbox",
     });
   };
 }

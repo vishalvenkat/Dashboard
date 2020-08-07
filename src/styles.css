@@ -21,3 +21,6 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+.custom-modalbox > mat-dialog-container {
+  padding: 0px;
+}
