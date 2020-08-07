@@ -2,9 +2,6 @@
   display: flex;
   color: var(--text-color-primary);
 }
-.dashboard__dropdown {
-  padding-right: 2%;
-}
 .dropdown {
   background-color: var(--bg-dropdown);
   border-radius: 5%;
@@ -20,13 +17,25 @@
   margin-bottom: 10px;
   justify-content: space-between;
 }
+mat-option {
+  background-color: var(--bg-secondary);
+  color: var(--text-color-secondary);
+}
+@media (max-width: 427px) {
+  .dashboard {
+    flex-direction: column;
+  }
+  .dashboard__dropdown {
+    margin-top: 10px;
+    margin-left: 50px;
+  }
+  .dropdown {
+    width: 200px;
+  }
+}
+
 @media (min-width: 1023px) {
   .dashboard__card {
     width: 350px;
   }
-}
-
-mat-option {
-  background-color: var(--bg-secondary);
-  color: var(--text-color-secondary);
 }
