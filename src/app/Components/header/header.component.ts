@@ -9,6 +9,7 @@ import { Theme } from "src/app/Interface/theme";
 })
 export class HeaderComponent implements OnInit {
   themeList: Theme[] = [];
+  activeTab: string = "Home";
   constructor(private themeService: ThemeService) {}
 
   ngOnInit() {
@@ -16,5 +17,8 @@ export class HeaderComponent implements OnInit {
   }
   changeTheme = (theme: Theme) => {
     this.themeService.setActiveTheme(theme);
+  };
+  setActiveTab = (tabClicked: string) => {
+    this.activeTab = tabClicked;
   };
 }

@@ -53,7 +53,6 @@ export class SocialMediaService {
   getLikeCount = (id: number, month: string) => {
     let socialMedia = this.getSocialMediaWithId(id);
     let like = socialMedia.likes.find((likes) => likes.month === month);
-    console.log(`${month} and ${like}`);
     return like === undefined ? 0 : like.count;
   };
   getPageViewCount = (id: number, month: string) => {
