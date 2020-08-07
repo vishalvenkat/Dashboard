@@ -31,7 +31,8 @@ li {
   padding: 15px 15px;
 }
 li:hover,
-.active {
+.active,
+.customize + * .mat-menu-panel {
   background-color: var(--hover--primary);
   color: var(--text-color-secondary);
 }

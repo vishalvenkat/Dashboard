@@ -20,9 +20,8 @@
     <li>About</li>
     <li [matMenuTriggerFor]="menu">
       <mat-icon>palette</mat-icon>
-      <mat-menu #menu="matMenu">
+      <mat-menu #menu="matMenu" backdropClass="customize">
         <button
-          class="menu__button"
           *ngFor="let theme of themeList"
           mat-menu-item
           (click)="changeTheme(theme)"

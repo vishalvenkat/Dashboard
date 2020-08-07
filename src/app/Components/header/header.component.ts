@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from "@angular/core";
+import { Component, OnInit, ViewEncapsulation } from "@angular/core";
 import { ThemeService } from "src/app/Services/theme.service";
 import { Theme } from "src/app/Interface/theme";
 
@@ -6,6 +6,7 @@ import { Theme } from "src/app/Interface/theme";
   selector: "app-header",
   templateUrl: "./header.component.html",
   styleUrls: ["./header.component.css"],
+  encapsulation: ViewEncapsulation.None,
 })
 export class HeaderComponent implements OnInit {
   themeList: Theme[] = [];
