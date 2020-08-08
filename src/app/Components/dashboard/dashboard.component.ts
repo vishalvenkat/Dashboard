@@ -15,7 +15,7 @@ export class DashboardComponent implements OnInit {
     id: number;
     name: string;
   }[] = [];
-  brandSelected: String = "-1";
+  brandSelected: string = "-1";
   dashBoardList: SocialMedia[] = [];
 
   constructor(
@@ -38,12 +38,12 @@ export class DashboardComponent implements OnInit {
     });
     this.setSocialMediaList(this.brandService.getBrandIdList());
   };
-  getSelectedBrandDetails = (brandId: number): void => {
+  getSelectedBrandDetails = (brandId: number | string): void => {
     if (brandId === -1) {
       this.setSocialMediaList(this.brandService.getBrandIdList());
     } else {
       let tempBrandList: number[] = [];
-      tempBrandList.push(brandId);
+      tempBrandList.push(Number(brandId));
       this.setSocialMediaList(tempBrandList);
     }
   };

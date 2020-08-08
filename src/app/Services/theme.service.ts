@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Theme } from "../Interface/theme";
-import * as themeJson from "src/assets/Json/theme.json";
+import themeJson from "src/assets/Json/theme.json";
 
 @Injectable({
   providedIn: "root",
@@ -9,10 +9,7 @@ export class ThemeService {
   private active: Theme;
   private availableThemes: Theme[] = [];
   constructor() {
-    Object.values(themeJson)[0].forEach((theme: Theme) =>
-      this.availableThemes.push(theme)
-    );
-    this.setTheme("light");
+    themeJson.forEach((theme) => this.availableThemes.push(theme));
   }
   private findThemeByName = (themeName: string): Theme => {
     return this.availableThemes.find((theme) => theme.name === themeName);

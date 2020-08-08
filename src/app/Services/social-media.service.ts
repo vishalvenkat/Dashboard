@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { SocialMedia } from "../Interface/social-media";
-import * as socialMediaJson from "src/assets/Json/socialMedia.json";
-import * as iconJson from "src/assets/Json/iconSource.json";
+import socialMediaJson from "src/assets/Json/socialMedia.json";
+import iconJson from "src/assets/Json/iconSource.json";
 import { IconSource } from "src/app/Interface/iconSource";
 
 @Injectable({
@@ -11,7 +11,7 @@ export class SocialMediaService {
   private socialMediaList: SocialMedia[] = [];
   private imgSourceList: IconSource[] = [];
   constructor() {
-    Object.values(socialMediaJson)[0].forEach((socialMedia: SocialMedia) =>
+    socialMediaJson.forEach((socialMedia) =>
       this.socialMediaList.push(socialMedia)
     );
   }
@@ -31,9 +31,7 @@ export class SocialMediaService {
   };
   getImageSource = (socialMediaType: string): string => {
     if (this.imgSourceList.length === 0) {
-      Object.values(iconJson)[0].forEach((iconSource: IconSource) => {
-        this.imgSourceList.push(iconSource);
-      });
+      iconJson.forEach((location) => this.imgSourceList.push(location));
     }
     return this.imgSourceList.find((img) => img.name === socialMediaType)
       .location;
