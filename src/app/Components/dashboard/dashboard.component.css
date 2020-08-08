@@ -21,6 +21,11 @@ mat-option {
   background-color: var(--bg-secondary);
   color: var(--text-color-secondary);
 }
+mat-label,
+.customize + * .mat-menu-panel {
+  color: var(--text-color-secondary) !important;
+}
+
 @media (max-width: 427px) {
   .dashboard {
     flex-direction: column;

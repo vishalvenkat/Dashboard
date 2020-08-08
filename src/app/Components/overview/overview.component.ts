@@ -11,22 +11,22 @@ import { SocialMediaService } from "src/app/Services/social-media.service";
 export class OverviewComponent implements OnInit {
   monthSelected: string = "All";
   monthList: string[] = [];
-  imgSource: string;
   likeCount: number;
   pageViewCount: number;
+  userName: string;
   constructor(
-    @Inject(MAT_DIALOG_DATA) public data: SocialMedia,
+    @Inject(MAT_DIALOG_DATA) public data: any,
     private socialMediaService: SocialMediaService
   ) {
     this.monthList = this.socialMediaService.getMonthList(data.socialMediaId);
-    this.imgSource = socialMediaService.getImageSource(data.socialMediaType);
     let counts = socialMediaService.getTotalCounts(data.socialMediaId);
     this.likeCount = counts.totalLikesCount;
     this.pageViewCount = counts.totalPageViewCount;
+    this.userName = socialMediaService.getAccountNameWithId(data.socialMediaId);
   }
 
   ngOnInit() {}
-  fetchValues = (month: string) => {
+  fetchValues = (month: string): void => {
     let counts = this.socialMediaService.initialiseCounts(
       this.data.socialMediaId,
       month

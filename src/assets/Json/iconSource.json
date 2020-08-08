@@ -1,0 +1,18 @@
+[
+  {
+    "name": "facebook",
+    "location": "../../../assets/Images/Icons/facebook.png"
+  },
+  {
+    "name": "instagram",
+    "location": "../../../assets/Images/Icons/instagram.png"
+  },
+  {
+    "name": "twitter",
+    "location": "../../../assets/Images/Icons/twitter.png"
+  },
+  {
+    "name": "youtube",
+    "location": "../../../assets/Images/Icons/youtube.png"
+  }
+]

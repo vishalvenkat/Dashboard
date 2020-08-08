@@ -1,87 +1,77 @@
 import { Injectable } from "@angular/core";
-import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { SocialMedia } from "../Interface/social-media";
+import * as socialMediaJson from "src/assets/Json/socialMedia.json";
+import * as iconJson from "src/assets/Json/iconSource.json";
+import { IconSource } from "src/app/Interface/iconSource";
 
 @Injectable({
   providedIn: "root",
 })
 export class SocialMediaService {
-  socialMediaList: SocialMedia[] = [];
-  constructor(http: HttpClient) {
-    http.get("./assets/Json/socialMedia.json").subscribe(
-      (data: SocialMedia[]) => {
-        this.generateBrandList(data);
-      },
-      (err: HttpErrorResponse) => {
-        alert(err.message);
-      }
+  private socialMediaList: SocialMedia[] = [];
+  private imgSourceList: IconSource[] = [];
+  constructor() {
+    Object.values(socialMediaJson)[0].forEach((socialMedia: SocialMedia) =>
+      this.socialMediaList.push(socialMedia)
     );
   }
-  generateBrandList = (data: SocialMedia[]): void => {
-    data.forEach((socialMedia) => {
-      this.socialMediaList.push(socialMedia);
-    });
-  };
-  getSocialMediaWithId = (id: number) => {
-    let socialMedia: SocialMedia = this.socialMediaList.find(
+  getSocialMediaWithId = (id: number): SocialMedia => {
+    return this.socialMediaList.find(
       (socialMedia) => socialMedia.socialMediaId === id
     );
-    return socialMedia;
   };
-  getMonthList = (id: number) => {
-    let socialMedia = this.socialMediaList.find(
-      (socialMedia) => socialMedia.socialMediaId === id
-    );
-    let monthList: string[] = [];
-    socialMedia.likes.forEach((likes) => {
-      monthList.push(likes.month);
-    });
-    return monthList;
+
+  getAccountNameWithId = (id: number): string => {
+    return this.getSocialMediaWithId(id).socialMediaUserName;
   };
-  getImageSource = (socialMediaType: string) => {
-    switch (socialMediaType) {
-      case "facebook":
-        return "../../../assets/Images/Icons/facebook.png";
-      case "instagram":
-        return "../../../assets/Images/Icons/instagram.png";
-      case "twitter":
-        return "../../../assets/Images/Icons/twitter.png";
-      case "youtube":
-        return "../../../assets/Images/Icons/youtube.png";
+  // Fetching month list from likes array. It can also be fetched from pageViews as they both are similar
+  getMonthList = (id: number): string[] => {
+    let socialMedia = this.getSocialMediaWithId(id);
+    return socialMedia.likes.map((like) => like.month);
+  };
+  getImageSource = (socialMediaType: string): string => {
+    if (this.imgSourceList.length === 0) {
+      Object.values(iconJson)[0].forEach((iconSource: IconSource) => {
+        this.imgSourceList.push(iconSource);
+      });
     }
+    return this.imgSourceList.find((img) => img.name === socialMediaType)
+      .location;
   };
-  getLikeCount = (id: number, month: string) => {
-    let socialMedia = this.getSocialMediaWithId(id);
-    let like = socialMedia.likes.find((likes) => likes.month === month);
-    return like === undefined ? 0 : like.count;
+  private getLikeCount = (month: string, socialMedia: SocialMedia): number => {
+    return socialMedia.likes.find((likes) => likes.month === month).count;
   };
-  getPageViewCount = (id: number, month: string) => {
-    let socialMedia = this.getSocialMediaWithId(id);
-    let pageView = socialMedia.pageViews.find(
-      (pageView) => pageView.month === month
-    );
-    return pageView === undefined ? 0 : pageView.count;
+
+  private getPageViewCount = (
+    month: string,
+    socialMedia: SocialMedia
+  ): number => {
+    return socialMedia.pageViews.find((pageView) => pageView.month === month)
+      .count;
+  };
+
+  private arraySum = (array: any[]): number => {
+    return array.reduce((a, b) => a + b, 0);
   };
   getTotalCounts = (id: number) => {
     let socialMedia = this.getSocialMediaWithId(id);
-    let totalLikesCount = 0;
-    let totalPageViewCount = 0;
-    socialMedia.likes.forEach((likes) => {
-      totalLikesCount += this.getLikeCount(id, likes.month);
-      totalPageViewCount += this.getPageViewCount(id, likes.month);
-    });
     return {
-      totalLikesCount: totalLikesCount,
-      totalPageViewCount: totalPageViewCount,
+      totalLikesCount: this.arraySum(
+        socialMedia.likes.map((like) => like.count)
+      ),
+      totalPageViewCount: this.arraySum(
+        socialMedia.pageViews.map((pageView) => pageView.count)
+      ),
     };
   };
   initialiseCounts = (id: number, month: string) => {
     if (month === "All") {
       return this.getTotalCounts(id);
     }
+    let socialMedia = this.getSocialMediaWithId(id);
     return {
-      totalLikesCount: this.getLikeCount(id, month),
-      totalPageViewCount: this.getPageViewCount(id, month),
+      totalLikesCount: this.getLikeCount(month, socialMedia),
+      totalPageViewCount: this.getPageViewCount(month, socialMedia),
     };
   };
 }

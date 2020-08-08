@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Theme } from "../Interface/theme";
-import { HttpClient, HttpErrorResponse } from "@angular/common/http";
+import * as themeJson from "src/assets/Json/theme.json";
 
 @Injectable({
   providedIn: "root",
@@ -8,27 +8,23 @@ import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 export class ThemeService {
   private active: Theme;
   private availableThemes: Theme[] = [];
-  constructor(http: HttpClient) {
-    http.get("./assets/Json/theme.json").subscribe(
-      (data: Theme[]) => {
-        this.generateThemeList(data);
-      },
-      (err: HttpErrorResponse) => {
-        alert(err.message);
-      }
+  constructor() {
+    Object.values(themeJson)[0].forEach((theme: Theme) =>
+      this.availableThemes.push(theme)
     );
+    this.setTheme("light");
   }
-  generateThemeList = (data: Theme[]): void => {
-    data.forEach((theme) => {
-      this.availableThemes.push(theme);
-    });
-    this.active = data.find((theme) => theme.name === "light");
+  private findThemeByName = (themeName: string): Theme => {
+    return this.availableThemes.find((theme) => theme.name === themeName);
   };
-  getAvailableThemes = () => {
-    return this.availableThemes;
+  private setTheme = (themeName: string): void => {
+    this.active = this.findThemeByName(themeName);
   };
-  setActiveTheme(theme: Theme): void {
-    this.active = theme;
+  getAvailableThemeNames = (): string[] => {
+    return this.availableThemes.map((theme) => theme.name);
+  };
+  setActiveTheme(themeName: string): void {
+    this.setTheme(themeName);
     Object.keys(this.active.properties).forEach((property) => {
       document.documentElement.style.setProperty(
         property,

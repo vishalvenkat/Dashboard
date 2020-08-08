@@ -9,17 +9,17 @@ import { Theme } from "src/app/Interface/theme";
   encapsulation: ViewEncapsulation.None,
 })
 export class HeaderComponent implements OnInit {
-  themeList: Theme[] = [];
+  themeList: string[] = [];
   activeTab: string = "Home";
   constructor(private themeService: ThemeService) {}
 
   ngOnInit() {
-    this.themeList = this.themeService.getAvailableThemes();
+    this.themeList = this.themeService.getAvailableThemeNames();
   }
-  changeTheme = (theme: Theme) => {
-    this.themeService.setActiveTheme(theme);
+  changeTheme = (themeName: string): void => {
+    this.themeService.setActiveTheme(themeName);
   };
-  setActiveTab = (tabClicked: string) => {
+  setActiveTab = (tabClicked: string): void => {
     this.activeTab = tabClicked;
   };
 }
