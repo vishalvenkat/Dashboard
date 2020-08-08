@@ -1,15 +1,27 @@
-.dashboard {
+.dashboard,
+.dashboard__cardView {
   display: flex;
+}
+
+.dashboard {
   color: var(--text-color-primary);
 }
+
+mat-option,
+mat-label,
+.customize + * .mat-menu-panel {
+  color: var(--text-color-secondary);
+}
+
 .dropdown {
   background-color: var(--bg-dropdown);
   border-radius: 5%;
 }
+
 .dashboard__cardView {
-  display: flex;
   flex-wrap: wrap;
 }
+
 .dashboard__card {
   width: 200px;
   margin-left: 50px;
@@ -17,23 +29,21 @@
   margin-bottom: 10px;
   justify-content: space-between;
 }
+
 mat-option {
   background-color: var(--bg-secondary);
-  color: var(--text-color-secondary);
-}
-mat-label,
-.customize + * .mat-menu-panel {
-  color: var(--text-color-secondary) !important;
 }
 
 @media (max-width: 427px) {
   .dashboard {
     flex-direction: column;
   }
+
   .dashboard__dropdown {
     margin-top: 10px;
     margin-left: 50px;
   }
+
   .dropdown {
     width: 200px;
   }
