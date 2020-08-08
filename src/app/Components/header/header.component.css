@@ -1,30 +1,33 @@
-.header {
+.header,
+.header__logo,
+.header__rightside {
   display: flex;
+}
+
+.header,
+.menu__button {
+  background-color: var(--bg-secondary);
+  color: var(--text-color-secondary);
+}
+.header,
+.header__logo {
+  align-items: center;
+}
+.header {
   justify-content: space-between;
   position: sticky;
   top: 0;
   z-index: 100;
-  align-items: center;
   list-style-type: none;
-  background-color: var(--bg-secondary);
-  color: var(--text-color-secondary);
   flex: 1;
   flex-wrap: wrap;
 }
 .header__logo {
-  display: flex;
-  align-items: center;
   flex: 0.7;
 }
 .header__rightside {
-  display: flex;
   flex: 0.3;
   justify-content: space-evenly;
-}
-
-.menu__button {
-  background-color: var(--bg-secondary);
-  color: var(--text-color-secondary);
 }
 li {
   cursor: pointer;

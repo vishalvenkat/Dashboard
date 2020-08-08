@@ -1,9 +1,13 @@
-.card {
+.card,
+.card__header {
   display: flex;
+  align-items: center;
+}
+
+.card {
   flex-direction: column;
   background-color: var(--bg-tertiary);
   padding: 4% 4%;
-  align-items: center;
   justify-content: space-between;
   box-shadow: var(--background-socialmedia-hover);
   color: var(--text-color-secondary);
@@ -11,10 +15,6 @@
 .card:hover {
   background-color: var(--hover--primary);
   cursor: pointer;
-}
-.card__header {
-  display: flex;
-  align-items: center;
 }
 .card__followers__count {
   font-weight: bold;
