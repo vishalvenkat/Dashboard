@@ -1,16 +1,18 @@
 <div class="overview">
   <div class="overview__dropdown">
     <mat-form-field>
-      <mat-label>Select Month</mat-label>
-      <mat-select
-        [(value)]="monthSelected"
-        (selectionChange)="fetchValues(monthSelected)"
+      <mat-label>Select month</mat-label>
+      <select
+        matNativeControl
+        (change)="fetchValues(option.value)"
+        #option
+        class="select__tag"
       >
-        <mat-option [value]="'All'">Whole Year</mat-option>
-        <div *ngFor="let month of monthList">
-          <mat-option [value]="month">{{ month }}</mat-option>
-        </div>
-      </mat-select>
+        <option [value]="'All'">All</option>
+        <option [value]="month" *ngFor="let month of monthList">{{
+          month
+        }}</option>
+      </select>
     </mat-form-field>
   </div>
   <div class="overview_logo">

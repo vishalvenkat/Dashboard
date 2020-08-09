@@ -2,15 +2,11 @@
 .dashboard__cardView {
   display: flex;
 }
-
-.dashboard {
-  color: var(--text-color-primary);
-}
-
-mat-option,
-mat-label,
-.customize + * .mat-menu-panel {
+select,
+option,
+mat-label {
   color: var(--text-color-secondary);
+  background-color: var(--bg-dropdown);
 }
 
 .dropdown {

@@ -1,17 +1,17 @@
 <div class="dashboard">
   <div class="dashboard__dropdown">
-    <mat-form-field class="dropdown">
+    <mat-form-field>
       <mat-label>Select brand</mat-label>
-      <mat-select
-        backdropClass="customize"
-        [(value)]="brandSelected"
-        (selectionChange)="getSelectedBrandDetails(brandSelected)"
+      <select
+        matNativeControl
+        (change)="getSelectedBrandDetails(option.value)"
+        #option
       >
-        <mat-option [value]="'-1'">All</mat-option>
-        <mat-option [value]="brand.id" *ngFor="let brand of brandList">{{
+        <option [value]="-1">All</option>
+        <option [value]="brand.id" *ngFor="let brand of brandList">{{
           brand.name
-        }}</mat-option>
-      </mat-select>
+        }}</option>
+      </select>
     </mat-form-field>
   </div>
   <div class="dashboard__cardView">

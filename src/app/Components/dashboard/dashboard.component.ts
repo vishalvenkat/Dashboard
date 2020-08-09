@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { BrandService } from "src/app/Services/brand.service";
 import { SocialMediaService } from "src/app/Services/social-media.service";
 import { SocialMedia } from "src/app/Interface/social-media";
@@ -38,8 +38,10 @@ export class DashboardComponent implements OnInit {
     });
     this.setSocialMediaList(this.brandService.getBrandIdList());
   };
-  getSelectedBrandDetails = (brandId: number | string): void => {
+  getSelectedBrandDetails = (brandid: string): void => {
+    let brandId = Number(brandid);
     if (brandId === -1) {
+      console.log("fetching all");
       this.setSocialMediaList(this.brandService.getBrandIdList());
     } else {
       let tempBrandList: number[] = [];
@@ -85,5 +87,8 @@ export class DashboardComponent implements OnInit {
   };
   getImageSource = (socialMediaType: string): string => {
     return this.socialMediaService.getImageSource(socialMediaType);
+  };
+  testFunction = (value: any) => {
+    console.log(value);
   };
 }

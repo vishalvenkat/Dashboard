@@ -22,11 +22,15 @@
   margin: auto;
   margin-top: 15px;
 }
-
+.overview,
+select,
+option,
+mat-label {
+  color: var(--text-color-secondary);
+}
 .overview {
   background: var(--bg-tertiary);
   height: 100%;
-  color: var(--text-color-secondary);
 }
 
 .overview__data {
@@ -43,7 +47,8 @@
   font-size: x-large;
 }
 
-mat-option {
-  background-color: var(--bg-secondary);
-  color: var(--text-color-secondary);
+select,
+option,
+mat-label {
+  background-color: var(--bg-dropdown);
 }
