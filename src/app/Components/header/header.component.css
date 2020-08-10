@@ -39,3 +39,8 @@ li:hover,
   background-color: var(--hover--primary);
   color: var(--text-color-secondary);
 }
+
+li:hover,
+.active {
+  border-bottom: 1px solid var(--text-color-secondary);
+}
