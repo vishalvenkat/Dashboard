@@ -3,6 +3,7 @@
     <mat-form-field>
       <mat-label>Select brand</mat-label>
       <select
+        matTooltip="Choose brands"
         matNativeControl
         (change)="getSelectedBrandDetails(option.value)"
         #option
@@ -19,6 +20,7 @@
       class="dashboard__card"
       *ngFor="let socialMedia of dashBoardList"
       (click)="overViewHandler(socialMedia.socialMediaId)"
+      matTooltip="Click to view more details"
     >
       <app-social-media-card
         [imgSource]="getImageSource(socialMedia.socialMediaType)"

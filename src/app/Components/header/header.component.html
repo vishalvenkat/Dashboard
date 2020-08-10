@@ -2,6 +2,7 @@
   <div>
     <li
       class="header__logo"
+      matTooltip="Home"
       routerLink="/"
       (click)="setActiveTab('Home')"
       [ngClass]="activeTab === 'Home' ? 'active' : ''"
@@ -12,13 +13,14 @@
   <div class="header__rightside">
     <li
       routerLink="/Dashboard"
+      matTooltip="View Dashboard"
       (click)="setActiveTab('Dashboard')"
       [ngClass]="activeTab === 'Dashboard' ? 'active' : ''"
     >
       Dashboard
     </li>
-    <li>About</li>
-    <li [matMenuTriggerFor]="menu">
+    <li matTooltip="About">About</li>
+    <li [matMenuTriggerFor]="menu" matTooltip="Change theme">
       <mat-icon>palette</mat-icon>
       <mat-menu #menu="matMenu" backdropClass="customize">
         <button

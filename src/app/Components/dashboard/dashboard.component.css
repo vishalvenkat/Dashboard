@@ -24,10 +24,7 @@ mat-label {
   margin-top: 10px;
   margin-bottom: 10px;
   justify-content: space-between;
-}
-
-mat-option {
-  background-color: var(--bg-secondary);
+  box-shadow: 1px 1px 1px #aaaaaa;
 }
 
 @media (max-width: 427px) {

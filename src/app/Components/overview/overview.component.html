@@ -3,6 +3,7 @@
     <mat-form-field>
       <mat-label>Select month</mat-label>
       <select
+        matTooltip="Choose month"
         matNativeControl
         (change)="fetchValues(option.value)"
         #option
